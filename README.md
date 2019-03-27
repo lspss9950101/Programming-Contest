@@ -1,5 +1,4 @@
 # Programmimg-Contest #
----
 |Problem Name					|Problem \#	|Description						|
 |-----------------------------------------------|---------------|-------------------------------------------------------|
 |2019 Assignment 1 \- Big Integer		|819		|<a href="https://oj.nctu.me/problems/819/">819</a>	|
