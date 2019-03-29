@@ -1,12 +1,11 @@
 #include<iostream>
 #include<stdio.h>
-#include<map>
 #include<vector>
 using namespace std;
 
 struct Node{
-	int count;
-	map<char, Node*> child;
+	long long count;
+	Node* child[26];
 };
 
 class TrieTree{
@@ -15,17 +14,18 @@ class TrieTree{
 	public:
 		TrieTree(){
 			root = new Node;
+			for(int i = 0; i < 26; i++)root->child[i] = 0;
 		}
-		int* insert(string s){
+		long long* insert(string s){
 			Node* node = root;
 			for(int i = 0; i < s.length(); i++){
 				char c = s[i];
-				if((node->child).find(c) == (node->child).end()){
-					Node* t = new Node;
-					t->count = 0;
-					(node->child).insert(pair<char, Node*>(c, t));
+				if(!node->child[c - 'a']){
+					node->child[c - 'a'] = new Node;
+					for(int j = 0; j < 26; j++)node->child[c - 'a']->child[j] = 0;
+					node->child[c - 'a']->count = 0;
 				}
-				node = (node->child)[c];
+				node = node->child[c - 'a'];
 			}
 			node->count++;
 			return &(node->count);
@@ -49,11 +49,12 @@ string generalizeString(string s){
 }
 
 int main(){
-	string s;
+	char cs[1000000];
 	TrieTree tt;
 	vector<string> list_s;
-	vector<int*> list_i;
-	while(cin >> s){
+	vector<long long*> list_i;
+	while(scanf("%s", cs) != EOF){
+		string s = cs;
 		s = generalizeString(s);
 		if(contains(list_s, s)){
 			tt.insert(s);
@@ -62,5 +63,5 @@ int main(){
 			list_i.push_back(tt.insert(s));
 		}
 	}
-	for(long long i = 0; i < list_s.size(); i++)cout << list_s[i] << " " << *list_i[i] << endl;
+	for(long long i = 0; i < list_s.size(); i++)printf("%s %lld\n", list_s[i].c_str(), *list_i[i]);
 }
