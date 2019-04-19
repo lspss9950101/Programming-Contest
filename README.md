@@ -7,3 +7,5 @@
 |2019 Assignment 4 \- Time Limit Exceed		|823	|[823](https://oj.nctu.me/problems/823/)	|[823.cpp](/FormosaOJ/823.cpp)	|
 |2019 Assignment 5 \- Binary String		|825	|[825](https://oj.nctu.me/problems/825/)	|[825.cpp](/FormosaOJ/825.cpp)	|
 |2019 Assignment 6 \- Chocolate! Chocolate!!	|826	|[826](https://oj.nctu.me/problems/826/)	|[826.cpp](/FormosaOJ/826.cpp)	|
+|2019 Assignment 7 \- Novelist			|829	|[829](https://oj.nctu.me/problems/829/)	|[829.cpp](/FormosaOJ/829.cpp)	|
+|2019 Assignment 8 \- Base station		|830	|[830](https://oj.nctu.me/problems/830/)	|[830.cpp](/FormosaOJ/830.cpp)	|
